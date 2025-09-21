@@ -1,0 +1,23 @@
+{
+  "name": "ledger-shop-playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmanuelplougoulm/ledger-shop-playwright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/emmanuelplougoulm/ledger-shop-playwright/issues"
+  },
+  "homepage": "https://github.com/emmanuelplougoulm/ledger-shop-playwright#readme",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.5.2"
+  }
+}
