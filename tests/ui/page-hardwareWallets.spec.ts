@@ -107,25 +107,33 @@ test.describe("Hardware Wallet Sections", () => {
     );
   });
 
-  // 7- section / secure seed phrase
   test("section / secure seed phrase", async ({ page }) => {
     const secureSeedPhraseSection = await page.locator(
       SELECTORS.secureSeedPhrase
     );
-
     await expect(secureSeedPhraseSection).toBeVisible();
+    await expect(secureSeedPhraseSection).toHaveText(
+      /Secure your seed phrase/i
+    );
   });
 
-  // 8- section / how to use hardware wallet
-  test("section / how to use hardware wallet", async ({ page }) => {
+  test("section / how to use hardware wallet is visible, displays correct title and 3 features", async ({
+    page,
+  }) => {
     const howToUseSection = await page.locator(
       SELECTORS.howToUseHardwareWallet
     );
-
     await expect(howToUseSection).toBeVisible();
+
+    const sectionTitle = howToUseSection.locator("h2.heading-3");
+    await expect(sectionTitle).toHaveText(/How to use a hardware wallet\?/i);
+
+    const features = howToUseSection.locator(
+      '[data-cs-override-id^="feature-details-"]'
+    );
+    await expect(features).toHaveCount(3);
   });
 
-  // 9- section / storage differences explained
   test("section / storage differences explained", async ({ page }) => {
     const storageDifferencesSection = await page.locator(
       SELECTORS.storageDifferences
