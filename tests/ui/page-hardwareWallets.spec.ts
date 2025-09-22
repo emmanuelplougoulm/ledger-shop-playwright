@@ -32,11 +32,12 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe("Page Structure Tests", () => {
-  // 1- website banner
-  test("page banner is visible", async ({ page }) => {
+  test("page banner is visible and contains two links", async ({ page }) => {
     const websiteBanner = page.locator(SELECTORS.websiteBanner);
 
     await expect(websiteBanner).toBeVisible();
+    const links = websiteBanner.locator("a");
+    await expect(links).toHaveCount(2);
   });
 
   // 2- Navigation
