@@ -70,25 +70,22 @@ test.describe("Page Structure Tests", () => {
 });
 
 test.describe("Hardware Wallet Sections", () => {
-  // 4- section / hardware wallet collection
-  test("section / hardware wallet collection is visible", async ({ page }) => {
+  test("section / hardware wallet collection section displays correct title and 4 cards", async ({
+    page,
+  }) => {
     const hardwareWalletSection = await page.locator(
       SELECTORS.hardwareWalletCollection
     );
-
     await expect(hardwareWalletSection).toBeVisible();
-  });
 
-  // 5- section / hardware wallet comparison
-  test("section / hardware wallet comparison is visible", async ({ page }) => {
-    const hardwareWalletComparisonSection = await page.locator(
-      SELECTORS.hardwareWalletComparison
+    const sectionTitle = hardwareWalletSection.locator("h2.heading-3");
+    await expect(sectionTitle).toHaveText(/Ledger Hardware Wallets/i);
+
+    const cards = hardwareWalletSection.locator(
+      '[data-testid="hardware-wallet-card"]'
     );
-
-    await expect(hardwareWalletComparisonSection).toBeVisible();
+    await expect(cards).toHaveCount(4);
   });
-
-  // 6- section / hardware wallet explained
   test("section / hardware wallet explained", async ({ page }) => {
     const hardwareWalletExplainedSection = await page.locator(
       SELECTORS.hardwareWalletExplained
