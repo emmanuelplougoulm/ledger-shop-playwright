@@ -86,6 +86,16 @@ test.describe("Hardware Wallet Sections", () => {
     );
     await expect(cards).toHaveCount(4);
   });
+  test("section / hardware wallet comparison section displays correct title ", async ({
+    page,
+  }) => {
+    const comparisonSection = page.locator(SELECTORS.hardwareWalletComparison);
+    await expect(comparisonSection).toBeVisible();
+
+    const sectionTitle = comparisonSection.locator("h2.heading-3");
+    await expect(sectionTitle).toHaveText(/Ledger Hardware Wallet Comparison/i);
+  });
+
   test("section / hardware wallet explained", async ({ page }) => {
     const hardwareWalletExplainedSection = await page.locator(
       SELECTORS.hardwareWalletExplained
