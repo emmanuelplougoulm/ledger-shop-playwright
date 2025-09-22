@@ -40,11 +40,12 @@ test.describe("Page Structure Tests", () => {
     await expect(links).toHaveCount(2);
   });
 
-  // 2- Navigation
-  test("page nav is visible", async ({ page }) => {
+  test("page nav is visible and contains expected items", async ({ page }) => {
     const mainNav = await page.locator(SELECTORS.mainNav);
-
     await expect(mainNav).toBeVisible();
+
+    const navItems = mainNav.locator("ul > li > *");
+    await expect(navItems).toHaveCount(6);
   });
 
   // 3- Header
