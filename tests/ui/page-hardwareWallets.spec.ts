@@ -100,8 +100,11 @@ test.describe("Hardware Wallet Sections", () => {
     const hardwareWalletExplainedSection = await page.locator(
       SELECTORS.hardwareWalletExplained
     );
-
     await expect(hardwareWalletExplainedSection).toBeVisible();
+
+    await expect(hardwareWalletExplainedSection).toHaveText(
+      /Hardware wallets explained/i
+    );
   });
 
   // 7- section / secure seed phrase
