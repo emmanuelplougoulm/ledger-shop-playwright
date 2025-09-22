@@ -48,14 +48,20 @@ test.describe("Page Structure Tests", () => {
     await expect(navItems).toHaveCount(6);
   });
 
-  // 3- Header
-  test("page header is visible", async ({ page }) => {
+  test("page header is visible displays correct title and CTA button", async ({
+    page,
+  }) => {
     const header = await page.locator(SELECTORS.header);
 
     await expect(header).toBeVisible();
-  });
 
-  // 13- footer
+    const headerTitle = header.locator("h1.heading-3");
+    await expect(headerTitle).toHaveText(/Hardware Wallet/i);
+
+    const ctaButton = page.locator('a[data-cs-override-id="hero-cta"]');
+    await expect(ctaButton).toBeVisible();
+    await expect(ctaButton).toHaveText(/Buy a Hardware Wallet/i);
+  });
   test("footer", async ({ page }) => {
     const footer = await page.locator(SELECTORS.footer);
 
