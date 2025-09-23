@@ -10,17 +10,17 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe("Page Structure Tests", () => {
-  test("page banner is visible and contains two links", async () => {
+  test("should display the website banner with two links", async () => {
     await expect(hwPage.websiteBanner).toBeVisible();
     await expect(hwPage.websiteBanner.locator("a")).toHaveCount(2);
   });
 
-  test("page nav is visible and contains expected items", async () => {
+  test("should display the main navigation with 6 items", async () => {
     await expect(hwPage.mainNav).toBeVisible();
     await expect(hwPage.mainNav.locator("ul > li > *")).toHaveCount(6);
   });
 
-  test("page header is visible displays correct title and CTA button", async ({
+  test("should display the header with correct title and CTA button", async ({
     page,
   }) => {
     await expect(hwPage.header).toBeVisible();
@@ -32,13 +32,13 @@ test.describe("Page Structure Tests", () => {
     await expect(ctaButton).toHaveText(/Buy a Hardware Wallet/i);
   });
 
-  test("footer", async () => {
+  test("should display the footer", async () => {
     await expect(hwPage.footer).toBeVisible();
   });
 });
 
 test.describe("Hardware Wallet Sections", () => {
-  test("section / hardware wallet collection section displays correct title and 4 cards", async () => {
+  test("should display the hardware wallet collection section with correct title and 4 product cards", async () => {
     await expect(hwPage.hardwareWalletCollection).toBeVisible();
     await expect(
       hwPage.hardwareWalletCollection.locator("h2.heading-3")
@@ -50,28 +50,28 @@ test.describe("Hardware Wallet Sections", () => {
     ).toHaveCount(4);
   });
 
-  test("section / hardware wallet comparison section displays correct title ", async () => {
+  test("should display the hardware wallet comparison section with correct title", async () => {
     await expect(hwPage.hardwareWalletComparison).toBeVisible();
     await expect(
       hwPage.hardwareWalletComparison.locator("h2.heading-3")
     ).toHaveText(/Ledger Hardware Wallet Comparison/i);
   });
 
-  test("section / hardware wallet explained", async () => {
+  test("should display the hardware wallet explained section with correct text", async () => {
     await expect(hwPage.hardwareWalletExplained).toBeVisible();
     await expect(hwPage.hardwareWalletExplained).toHaveText(
       /Hardware wallets explained/i
     );
   });
 
-  test("section / secure seed phrase", async () => {
+  test("should display the secure seed phrase section with correct text", async () => {
     await expect(hwPage.secureSeedPhrase).toBeVisible();
     await expect(hwPage.secureSeedPhrase).toHaveText(
       /Secure your seed phrase/i
     );
   });
 
-  test("section / how to use hardware wallet is visible, displays correct title and 3 features", async () => {
+  test("should display the 'How to use a hardware wallet' section with correct title and 3 features", async () => {
     await expect(hwPage.howToUseHardwareWallet).toBeVisible();
     await expect(
       hwPage.howToUseHardwareWallet.locator("h2.heading-3")
@@ -83,21 +83,21 @@ test.describe("Hardware Wallet Sections", () => {
     ).toHaveCount(3);
   });
 
-  test("section / storage differences explained", async () => {
+  test("should display the storage differences section", async () => {
     await expect(hwPage.storageDifferences).toBeVisible();
   });
 
-  test("section / hardware wallet benefits", async () => {
+  test("should display the hardware wallet benefits section", async () => {
     await expect(hwPage.walletBenefits).toBeVisible();
   });
 });
 
 test.describe("Additional Sections", () => {
-  test("section / Ledger live", async () => {
+  test("should display the Ledger Live section", async () => {
     await expect(hwPage.ledgerLive).toBeVisible();
   });
 
-  test("section / stay in touch", async () => {
+  test("should display the Stay in Touch section", async () => {
     await expect(hwPage.stayInTouch).toBeVisible();
   });
 });
