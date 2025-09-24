@@ -27,7 +27,7 @@ export class HardwareWalletsCheckoutPage {
   constructor(page: Page) {
     this.page = page
 
-    this.flexCartButton = this.page.getByRole('button', { name: /add to cart/i })
+    this.flexCartButton = this.page.locator('[data-cs-override-id="ledger-flex-atc"]')
     this.ledgerRecoverDeclineOption = this.page.getByRole('radio', { name: /no coverage/i })
     this.checkoutButton = this.page.getByRole('button', { name: /checkout/i, exact: true })
     this.shippingButton = page.getByRole('button', { name: /continue to shipping/i })
