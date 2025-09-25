@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test'
 
-import { HardwareWalletsCheckoutPage } from '../pages/HardwareWalletsCheckoutPage'
+import { HardwareWalletsCheckoutPage } from '../../pages/HardwareWalletsCheckoutPage'
 
 test.describe('Ledger Hardware Wallet Checkout Flow', () => {
   test('should complete entire checkout flow', async ({ page }) => {
