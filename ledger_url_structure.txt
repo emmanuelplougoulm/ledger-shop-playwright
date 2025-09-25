@@ -1,0 +1,88 @@
+========================================
+LEDGER SHOP URL STRUCTURE
+========================================
+
+---
+[MAIN URL]
+---
+https://shop.ledger.com/
+
+---
+[PAGES]
+---
+### PRODUCTS & COMPARISONS
+https://shop.ledger.com/pages/ledger-flex
+https://shop.ledger.com/pages/ledger-stax
+https://shop.ledger.com/pages/ledger-nano-x
+https://shop.ledger.com/pages/ledger-nano-s-plus
+https://shop.ledger.com/pages/hardware-wallet
+https://shop.ledger.com/pages/hardware-wallets-comparison
+https://shop.ledger.com/pages/bitcoin-hardware-wallet
+
+### RECOVERY SOLUTIONS
+https://shop.ledger.com/pages/recovery-solutions
+https://shop.ledger.com/pages/ledger-recover
+https://shop.ledger.com/pages/ledger-recover-redeem-code-terms-and-conditions
+
+### LEGAL & TERMS
+https://shop.ledger.com/pages/terms-and-conditions
+https://shop.ledger.com/pages/cookie-policy
+https://shop.ledger.com/pages/disclaimers
+https://shop.ledger.com/pages/website-terms-of-use
+https://shop.ledger.com/pages/gift-cards-terms-and-conditions
+https://shop.ledger.com/pages/how-to-redeem-terms-and-conditions
+
+---
+[PRODUCTS]
+---
+### MAIN DEVICES
+https://shop.ledger.com/products/ledger-stax
+https://shop.ledger.com/products/ledger-stax/ledger-stax™-+-recovery-key
+https://shop.ledger.com/products/ledger-stax/ledger-stax™-%2B-recovery-key
+https://shop.ledger.com/products/ledger-nano-x
+https://shop.ledger.com/products/ledger-nano-x/onyx-black
+https://shop.ledger.com/products/ledger-nano-x/btc-orange
+https://shop.ledger.com/products/ledger-nano-s-plus
+https://shop.ledger.com/products/ledger-nano-s-plus/matte-black
+https://shop.ledger.com/products/ledger-nano-s-plus/btc-orange
+https://shop.ledger.com/products/ledger-flex-solana-edition-50-sol/solana-edition
+
+### LIMITED EDITIONS & COLLABORATIONS
+https://shop.ledger.com/products/ledger-stax-alpine-formula-1-team/ledger-stax-x-alpine-formula-1
+https://shop.ledger.com/products/pudgy-penguins-ledger-flex-bundle/pudgy-penguins-x-ledger-flex™-bundle
+https://shop.ledger.com/products/pudgy-penguins-ledger-flex-case/pudgy-penguins-x-ledger-flex™-case
+https://shop.ledger.com/products/ledger-flex-monopoly-bitcoin-bundle/ledger-flex™-x-monopoly-bitcoin-bundle
+https://shop.ledger.com/products/rtfkt-ledger-nano-x/chalk-blade
+https://shop.ledger.com/products/ledger-nano-x-clay-nation
+https://shop.ledger.com/products/ledger-nano-x-the-hundreds
+https://shop.ledger.com/products/ledger-nano-x-wvrps
+https://shop.ledger.com/products/fvckrender-lvcidia-ledger-nano-x/fvckrender-x-lvcidia-x-ledger-nano-x
+https://shop.ledger.com/products/belvedere-museum-ledger-stax/belvedere-museum-x-ledger-stax™-“the-kiss”-limited-edition
+https://shop.ledger.com/products/magic-eden-custom-flex-bundle
+
+### ACCESSORIES & BACKUP SOLUTIONS
+https://shop.ledger.com/products/cryptotag-zeus/cryptotag
+https://shop.ledger.com/products/cryptotag-loki
+https://shop.ledger.com/products/cryptosteel-capsule-solo
+https://shop.ledger.com/products/the-billfodl
+https://shop.ledger.com/products/ledger-backup-pack
+https://shop.ledger.com/products/ledger-nano-case/ledger-nano-x-case
+https://shop.ledger.com/products/ledger-nano-pod/ledger-nano-x-pod
+https://shop.ledger.com/products/ledger-flex-magnet-folio/business-charcoal
+https://shop.ledger.com/products/ledger-flex-magnet-folio
+https://shop.ledger.com/products/ledger-flex-protective-case/bitcoin-orange
+https://shop.ledger.com/products/ledger-flex-protective-case
+https://shop.ledger.com/products/ledger-stax-magnet-shell/bitcoin-orange
+https://shop.ledger.com/products/ledger-stax-magnet-shell
+https://shop.ledger.com/products/case-ambush-ledger/ambush®-liquid-metal-case
+https://shop.ledger.com/products/ledger-otg-kit
+
+### CHARGERS & BUNDLES
+https://shop.ledger.com/products/anker-wireless-charger
+https://shop.ledger.com/products/belkin-boost-charge/black
+https://shop.ledger.com/products/belkin-boost-charge
+https://shop.ledger.com/products/ledger-nano-x-3pack/ledger-family-pack-x
+https://shop.ledger.com/products/ledger-family-pack-s-plus
+https://shop.ledger.com/products/gift-card
+
+
