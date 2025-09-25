@@ -1,10 +1,10 @@
 // Base paths
-const BASE = 'https://shop.ledger.com'
-const PAGES = `${BASE}/pages`
-const PRODUCTS = `${BASE}/products`
+const BASE_URL = 'https://shop.ledger.com'
+const PAGES = `${BASE_URL}/pages`
+const PRODUCTS = `${BASE_URL}/products`
 
 export const LEDGER_URLS = {
-  home: BASE,
+  home: BASE_URL,
   pages: {
     // Products & Comparisons
     ledgerFlex: `${PAGES}/ledger-flex`,
