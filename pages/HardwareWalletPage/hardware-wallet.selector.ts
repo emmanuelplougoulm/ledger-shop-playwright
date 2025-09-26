@@ -22,7 +22,7 @@ export const HardwareWalletSelectors = {
   },
 
   checkout: {
-    flexCartButton: (page: Page) => page.locator('[data-cs-override-id="ledger-flex-atc"]'),
+    flexCartButton: (page: Page) => page.getByTestId('hardware-wallet-collection').getByRole('button', { name: 'Add to cart' }).nth(2),
     recoverDeclineOption: (page: Page) => page.getByRole('radio').filter({ hasText: /no coverage/i }),
     checkoutButton: (page: Page) => page.getByRole('button', { name: /checkout/i, exact: true }),
     shippingButton: (page: Page) => page.getByRole('button', { name: /continue to shipping/i }),
