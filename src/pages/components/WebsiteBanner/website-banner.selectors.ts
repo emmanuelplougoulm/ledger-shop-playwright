@@ -1,7 +1,7 @@
+import { Page } from '@playwright/test'
+
 export const WebsiteBannerSelectors = {
-  banner: 'div[data-testid="website-banner"]',
-  mainLink: 'a:not([data-testid="website-banner-link"])',
-  ctaButton: 'a[data-testid="website-banner-link"]',
-  mainMessage: 'span:first-child',
-  ctaText: 'span:first-child',
+  banner: (page: Page) => page.getByTestId('website-banner'),
+  mainLink: (page: Page) => page.getByRole('link').filter({ hasText: /review and sign transactions/i }),
+  ctaButton: (page: Page) => page.getByRole('link').filter({ hasText: /discover now/i }),
 }
