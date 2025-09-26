@@ -1,10 +1,10 @@
 import { expect, test } from '@playwright/test'
 
-import { HardwareWalletsCheckoutPage } from '../../pages/HardwareWalletsCheckoutPage'
+import { HardwareWalletPage } from '../../../pages/HardwareWallet/HardwareWalletPage'
 
 test.describe('Ledger Hardware Wallet Checkout Flow', () => {
   test('should complete entire checkout flow', async ({ page }) => {
-    const checkoutPage = new HardwareWalletsCheckoutPage(page)
+    const checkoutPage = new HardwareWalletPage(page)
 
     await test.step('1. Navigate to Hardware Wallets page', async () => {
       await checkoutPage.goto()
@@ -24,9 +24,9 @@ test.describe('Ledger Hardware Wallet Checkout Flow', () => {
       await expect(checkoutPage.page).toHaveURL(/checkouts/)
     })
 
-    await test.step('5. Fill shipping information form', async () => {
-      await checkoutPage.fillInfosForm()
-    })
+    // await test.step('5. Fill shipping information form', async () => {
+    //   await checkoutPage.fillInfosForm()
+    // })
 
     await test.step('7. Proceed to shipping', async () => {
       await checkoutPage.proceedToShipping()

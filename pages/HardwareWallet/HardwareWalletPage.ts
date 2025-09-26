@@ -1,6 +1,6 @@
 import { Locator, Page, expect } from '@playwright/test'
 
-import { LEDGER_URLS } from '../../../constants/URLS'
+import { LEDGER_URLS } from '../../constants/URLS'
 import { WebsiteBanner } from '../components/WebsiteBanner/WebsiteBanner'
 
 interface UserData {
