@@ -1,7 +1,7 @@
 import { Locator, Page, expect } from '@playwright/test'
 
 import { LEDGER_URLS } from '../../constants/URLS'
-import { WebsiteBanner } from '../components/WebsiteBanner/WebsiteBanner'
+import { WebsiteBanner } from '../__components/WebsiteBanner/WebsiteBanner'
 
 interface UserData {
   email: string
@@ -70,11 +70,11 @@ export class HardwareWalletPage {
     this.stayInTouch = page.locator('h4.heading-4:has-text("Stay in touch")')
 
     // Checkout Elements
-    this.flexCartButton = page.locator('[data-cs-override-id="ledger-flex-atc"]')
-    this.ledgerRecoverDeclineOption = page.getByRole('radio', { name: /no coverage/i })
+    this.flexCartButton = page.getByTestId('hardware-wallet-collection').getByRole('button', { name: 'Add to cart' }).nth(2)
+    this.ledgerRecoverDeclineOption = page.getByTestId('ts-ledger-recover-decline')
     this.checkoutButton = page.getByRole('button', { name: /checkout/i, exact: true })
     this.shippingButton = page.getByRole('button', { name: /continue to shipping/i })
-    this.standardShippingOption = page.getByRole('radio', { name: /standard courier/i })
+    this.standardShippingOption = page.getByRole('radio', { name: /Standard Courier.*2 to 3 business days.*Free/i }).first()
     this.paymentButton = page.getByRole('button', { name: /continue to payment/i })
     this.emailInput = page.locator('input[name="email"]')
     this.firstNameInput = page.getByRole('textbox', { name: 'First name' })
@@ -138,10 +138,12 @@ export class HardwareWalletPage {
 
   async proceedToShipping(): Promise<void> {
     await this.shippingButton.click()
-    await expect(this.standardShippingOption).toBeVisible()
+    // await expect(this.standardShippingOption).toBeVisible()
   }
 
   async selectStandardShipping(): Promise<void> {
+    await expect(this.standardShippingOption).toBeVisible()
+
     await this.standardShippingOption.click()
   }
 
