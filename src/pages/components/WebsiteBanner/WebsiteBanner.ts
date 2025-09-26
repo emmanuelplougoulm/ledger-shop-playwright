@@ -1,5 +1,7 @@
 import { Locator, Page } from '@playwright/test'
 
+import { WebsiteBannerSelectors } from './website-banner.selectors.ts'
+
 export class WebsiteBanner {
   private readonly page: Page
   private readonly banner: Locator
@@ -9,9 +11,9 @@ export class WebsiteBanner {
 
   constructor(page: Page) {
     this.page = page
-    this.banner = page.locator('div[data-testid="website-banner"]')
-    this.mainLink = this.banner.locator('a:not([data-testid="website-banner-link"])')
-    this.ctaButton = this.banner.locator('a[data-testid="website-banner-link"]')
+    this.banner = page.locator(WebsiteBannerSelectors.banner)
+    this.mainLink = this.banner.locator(WebsiteBannerSelectors.mainLink)
+    this.ctaButton = this.banner.locator(WebsiteBannerSelectors.ctaButton)
     // this.mobileChevron = this.banner.locator('svg.rtl\\:rotate-180')
   }
 
