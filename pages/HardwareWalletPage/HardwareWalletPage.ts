@@ -1,12 +1,11 @@
 import { Locator, Page, expect } from '@playwright/test'
 
-import { LEDGER_URLS } from '../../constants/URLS'
+import { BasePage } from '../basePage.ts'
 import { WebsiteBanner } from '../__components/WebsiteBanner/WebsiteBanner'
 
-export class HardwareWalletPage {
+export class HardwareWalletPage extends BasePage {
   readonly page: Page
   readonly websiteBanner: WebsiteBanner
-  readonly HARDWARE_WALLETS_URL = `${LEDGER_URLS.pages.hardwareWallet}`
 
   readonly mainNav: Locator
   readonly header: Locator
@@ -26,6 +25,7 @@ export class HardwareWalletPage {
   readonly flexCartButton: Locator
 
   constructor(page: Page) {
+    super(page)
     this.page = page
     this.websiteBanner = new WebsiteBanner(page)
 
@@ -45,10 +45,6 @@ export class HardwareWalletPage {
     this.stayInTouch = page.locator('h4.heading-4:has-text("Stay in touch")')
 
     this.flexCartButton = page.getByTestId('hardware-wallet-collection').getByRole('button', { name: 'Add to cart' }).nth(2)
-  }
-
-  async goto(): Promise<void> {
-    await this.page.goto(this.HARDWARE_WALLETS_URL)
   }
 
   // Content Verification

@@ -2,6 +2,7 @@ import { expect, test } from '@playwright/test'
 
 import { HardwareWalletPage } from '../../../pages/HardwareWalletPage/HardwareWalletPage'
 import { InformationPage } from '../../../pages/InformationPage/InformationPage'
+import { LEDGER_URLS } from '../../../constants/URLS'
 import { SideDrawer } from '../../../pages/__components/SIdeDrawer/SideDrawer'
 
 const UserData = {
@@ -14,14 +15,14 @@ const UserData = {
   phone: '0687654567',
 }
 
-test.describe('Hardware Wallet Checkout Flow', () => {
+test.describe('Hardware Wallet Checkout Flow', { tag: '@e2e' }, () => {
   test('should complete an entire checkout flow', async ({ page }) => {
     const hwPage = new HardwareWalletPage(page)
     const sideDrawer = new SideDrawer(page)
     const infoPage = new InformationPage(page)
 
     await test.step('1. Navigate to Hardware Wallets page', async () => {
-      await hwPage.goto()
+      await hwPage.navigate(LEDGER_URLS.pages.hardwareWallet)
       await expect(page).toHaveURL(/hardware-wallet/)
     })
 
