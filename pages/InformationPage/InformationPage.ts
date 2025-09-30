@@ -2,8 +2,8 @@ import { Locator, Page, expect } from '@playwright/test'
 
 interface UserData {
   email: string
-  firstName: string
-  lastName: string
+  firstname: string
+  lastname: string
   address: string
   postalCode: string
   city: string
@@ -42,8 +42,8 @@ export class InformationPage {
   async fillShippingForm(userData: UserData): Promise<void> {
     await expect(this.page.locator('[id="shippingAddressForm"]')).toBeVisible()
     await this.emailInput.fill(userData.email)
-    await this.firstNameInput.fill(userData.firstName)
-    await this.lastNameInput.fill(userData.lastName)
+    await this.firstNameInput.fill(userData.firstname)
+    await this.lastNameInput.fill(userData.lastname)
     await this.addressInput.fill(userData.address)
     await this.postalCodeInput.fill(userData.postalCode)
     await this.cityInput.fill(userData.city)

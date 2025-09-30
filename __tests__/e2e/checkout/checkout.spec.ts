@@ -5,16 +5,7 @@ import { InformationPage } from '../../../pages/InformationPage/InformationPage'
 import { LEDGER_URLS } from '../../../constants/URLS'
 import { PageFactory } from '../../../factories/PageFactory'
 import { SideDrawer } from '../../../pages/__components/SIdeDrawer/SideDrawer'
-
-const UserData = {
-  email: 'victor@gmail.com',
-  firstName: 'victor',
-  lastName: 'toto',
-  address: '2, rue de la paix',
-  postalCode: '75002',
-  city: 'Paris',
-  phone: '0687654567',
-}
+import { UserBuilder } from '../../../utils/testDataBuilder'
 
 test.describe('Hardware Wallet Checkout Flow', { tag: '@e2e' }, () => {
   test('should complete an entire checkout flow', async ({ page }) => {
@@ -43,6 +34,16 @@ test.describe('Hardware Wallet Checkout Flow', { tag: '@e2e' }, () => {
     })
 
     await test.step('5. Fill shipping information form', async () => {
+      const UserData = new UserBuilder()
+        .withFirstname('victor')
+        .withLastname('toto')
+        .withEmail('victor@gmail.com')
+        .withAddress('2, rue de la paix')
+        .withPostalCode('75002')
+        .withCity('Paris')
+        .withPhone('0687654567')
+        .build()
+
       await infoPage.fillShippingForm(UserData)
     })
 
