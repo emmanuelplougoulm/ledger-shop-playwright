@@ -3,6 +3,7 @@ import { expect, test } from '@playwright/test'
 import { HardwareWalletPage } from '../../../pages/HardwareWalletPage/HardwareWalletPage'
 import { InformationPage } from '../../../pages/InformationPage/InformationPage'
 import { LEDGER_URLS } from '../../../constants/URLS'
+import { PageFactory } from '../../../factories/PageFactory'
 import { SideDrawer } from '../../../pages/__components/SIdeDrawer/SideDrawer'
 
 const UserData = {
@@ -17,7 +18,9 @@ const UserData = {
 
 test.describe('Hardware Wallet Checkout Flow', { tag: '@e2e' }, () => {
   test('should complete an entire checkout flow', async ({ page }) => {
-    const hwPage = new HardwareWalletPage(page)
+    const hwPage = PageFactory.getPage(page, 'hardwareWallet') as HardwareWalletPage
+
+    // const hwPage = new HardwareWalletPage(page)
     const sideDrawer = new SideDrawer(page)
     const infoPage = new InformationPage(page)
 
