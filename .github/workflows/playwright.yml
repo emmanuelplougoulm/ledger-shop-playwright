@@ -4,7 +4,7 @@ on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
-    container: mcr.microsoft.com/playwright:v1.42.0-focal  
+    container: mcr.microsoft.com/playwright:v1.55.0-focal  
     steps:
       - uses: actions/checkout@v4
       - name: install dependencies
