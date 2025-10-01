@@ -1,0 +1,13 @@
+name: Ledger shop Playwright Tests
+on: [push, pull_request] 
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.42.0-focal  
+    steps:
+      - uses: actions/checkout@v4
+      - name: install dependencies
+        run: npm ci
+      - name: run tests
+        run: npx playwright test
