@@ -4,7 +4,7 @@ import { HardwareWalletPage } from '../../../pages/HardwareWalletPage/HardwareWa
 import { InformationPage } from '../../../pages/InformationPage/InformationPage'
 import { LEDGER_URLS } from '../../../constants/URLS'
 import { PageFactory } from '../../../factories/PageFactory'
-import { SideDrawer } from '../../../pages/__components/SIdeDrawer/SideDrawer'
+import { SideDrawer } from '../../../pages/__components/SideDrawer/SideDrawer'
 import { UserBuilder } from '../../../utils/testDataBuilder'
 
 test.describe('Hardware Wallet Checkout Flow', { tag: '@e2e' }, () => {
