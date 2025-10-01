@@ -1,4 +1,4 @@
-name: Ledger shop Playwright Tests
+name: Playwright Tests
 on: [push, pull_request] 
 
 jobs:
